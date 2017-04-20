@@ -1270,9 +1270,9 @@ progressbarHeight="12" />
   <widget source="session.CurrentService" render="Label" position="1366,925" size="90,30" font="Regular; 30" halign="left" backgroundColor="black" transparent="1" valign="center">
     <convert type="ServiceInfo">VideoHeight</convert>
   </widget>
-  <widget source="session.Event_Next" render="AXBlueRunningText" options="movetype=running,startdelay=500,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="1252,610" size="640,300" font="Regular;32" halign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2">
-    <convert type="EventName">FullDescription</convert>
-  </widget>
+  <widget source="session.Event_Next" render="AXBlueRunningText" options="movetype=running,direction=top,startpoint=0,steptime=60, startdelay=8000,wrap=1,always=0,repeat=2,oneshot=1" position="1252,610" size="640,300" font="Regular;32" halign="center" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2">
+  <convert type="EventName">FullDescription</convert>
+</widget>
   <widget source="session.Event_Now" render="Label" font="Regular; 32" position="1363,492" size="110,40" zPosition="2" halign="center" backgroundColor="black" foregroundColor="white" transparent="1">
     <convert type="EventTime">EndTime</convert>
     <convert type="ClockToText">Format:%H:%M</convert>
