@@ -30,7 +30,7 @@
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="AX_Blue_FHD_4ATV/p_bar_sel.png" position="1252,641" size="640,8" zPosition="1" transparent="1" borderWidth="1" borderColor="foregroundClock">
+    <widget source="session.Event_Now" render="Progress" pixmap="AX_Blue_FHD_4ATV/p_bar_color2.png" position="1252,640" size="640,10" zPosition="1" transparent="1" borderWidth="1" borderColor="foregroundClock">
       <convert type="EventTime">Progress</convert>
     </widget>
     <ePixmap pixmap="AX_Blue_FHD_4ATV/icons/ico_hd_off.png" position="1541,1016" size="86,35" zPosition="1" alphatest="blend" />

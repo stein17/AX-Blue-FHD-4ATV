@@ -1,37 +1,37 @@
 <skin>
- <!--skin_SecondInfobar_Horizontal-->
-  <screen backgroundColor="background" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1920,1080" title="SecondInfoBar">
-    <ePixmap name="back" position="0,0" size="1920,1080" pixmap="AX_Blue_FHD_4ATV/menu/Chanel.png" zPosition="-10" />
-    <widget source="session.Event_Now" render="AXBlueRunningText" options="movetype=running,startdelay=10000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="27,178" size="1170,330" font="Regular;34" halign="center" foregroundColor="foregroundClock" backgroundColor="black" transparent="1" zPosition="2">
+ <!--skin_SecondInfobar_Diagonal-->
+ <screen backgroundColor="background" flags="wfNoBorder" name="SecondInfoBar" position="0,0" size="1920,1080" title="SecondInfoBar">
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/Browser.png" position="0,0" zPosition="-20" size="1920,1080" />
+    <widget source="session.Event_Now" render="AXBlueRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=8000,wrap=1,always=0,repeat=2,oneshot=1" position="35,185" size="925,400" font="Regular;36" halign="center" foregroundColor="foregroundClock" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
-    <widget source="session.Event_Next" render="AXBlueRunningText" options="movetype=running,startdelay=10000,steptime=60,direction=top,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="27,580" size="1170,330" font="Regular;34" halign="center" valign="top" foregroundColor="foregroundClock" backgroundColor="black" transparent="1" zPosition="2">
+    <widget source="session.Event_Next" render="AXBlueRunningText" options="movetype=running,direction=top,startpoint=0,startdelay=8000,wrap=1,always=0,repeat=2,oneshot=1" position="994,597" size="895,307" font="Regular;36" halign="center" valign="top" foregroundColor="foregroundClock" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="28,127" size="1100,50" font="Regular;34" halign="left" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="lightblue">
+    <widget source="session.Event_Now" render="AXBlueRunningText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" position="35,130" size="925,50" font="Regular;36" halign="left" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="cyan1">
       <convert type="EventName">NameNow</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" position="998,915" size="200,50" font="Regular;36" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="2">
+    <widget source="session.Event_Next" render="Label" position="1299,910" size="200,50" font="Regular;36" foregroundColor="grey" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventTime">Duration</convert>
       <convert type="ClockToText">InMinutes</convert>
     </widget>
-    <widget source="session.CurrentService" render="Picon" position="1253,218" size="100,60" zPosition="6" transparent="1" alphatest="blend">
-      <convert type="ServiceName">Reference</convert>
-    </widget>
-    <widget source="session.Event_Now" render="Label" position="1402,586" size="150,50" font="Regular;36" halign="right" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2">
+    <widget source="session.Event_Now" render="Label" position="1600,380" size="150,50" font="Regular;36" halign="right" foregroundColor="lightblue" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="1562,586" size="150,50" font="Regular;36" halign="left" foregroundColor="white" backgroundColor="black" transparent="1" zPosition="2">
+    <widget source="session.Event_Now" render="Label" position="1756,380" size="150,50" font="Regular;36" halign="left" foregroundColor="lightblue" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="1713,586" size="180,50" font="Regular;36" foregroundColor="red" backgroundColor="black" transparent="1" zPosition="2">
+    <widget source="session.Event_Now" render="Label" position="1686,450" size="180,50" font="Regular;36" foregroundColor="bluetitle" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="AX_Blue_FHD_4ATV/p_bar_sel.png" position="1252,641" size="640,8" zPosition="1" transparent="1" borderWidth="1" borderColor="foregroundClock">
+    <widget source="session.Event_Now" render="Progress" pixmap="AX_Blue_FHD_4ATV/p_bar_col2.png" position="1642,359" size="250,8" zPosition="1" transparent="1" borderWidth="1" borderColor="foregroundClock">
       <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Picon" position="1642,204" size="250,141" zPosition="6" transparent="1" alphatest="blend">
+      <convert type="ServiceName">Reference</convert>
     </widget>
     <ePixmap pixmap="AX_Blue_FHD_4ATV/icons/ico_hd_off.png" position="1541,1016" size="86,35" zPosition="1" alphatest="blend" />
     <widget source="session.CurrentService" render="Pixmap" position="1541,1016" size="86,35" zPosition="2" pixmap="AX_Blue_FHD_4ATV/icons/ico_hd_on.png" alphatest="blend">
@@ -79,8 +79,8 @@
       <convert type="ServiceInfo">SubservicesAvailable</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <ePixmap alphatest="blend" pixmap="AX_Blue_FHD_4ATV/icons/ico_rec_off.png" position="1114,139" size="80,26" zPosition="2" />
-    <widget alphatest="blend" pixmap="AX_Blue_FHD_4ATV/icons/ico_rec_on.png" position="1114,139" render="Pixmap" size="80,26" source="session.RecordState" zPosition="5">
+    <ePixmap alphatest="blend" pixmap="AX_Blue_FHD_4ATV/icons/ico_rec_off.png" position="1000,140" size="80,26" zPosition="2" />
+    <widget alphatest="blend" pixmap="AX_Blue_FHD_4ATV/icons/ico_rec_on.png" position="1000,140" render="Pixmap" size="80,26" source="session.RecordState" zPosition="5">
       <convert type="ConditionalShowHide">Blink</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1032,1017" size="90,36" font="Regular; 30" halign="right" backgroundColor="black" transparent="1" valign="center">
@@ -212,8 +212,7 @@
     </widget>
     <eLabel text="Tuner:" position="10,1017" size="110,36" font="Regular; 30" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="bluelabel" zPosition="5" />
     <eLabel text="Crypt:" position="258,1017" size="110,36" font="Regular; 30" halign="center" backgroundColor="black" transparent="1" valign="center" foregroundColor="bernstein" zPosition="5" />
-    <eLabel backgroundColor="black" position="655,125" size="409,230" zPosition="-15" />
-    <eLabel backgroundColor="white" position="653,123" size="413,234" zPosition="-20" />
+    
     <widget noWrap="1" backgroundColor="background20" foregroundColor="red" font="Regular; 27" render="Label" position="420,18" size="90,30" source="session.MSNWeather" transparent="1" zPosition="8" halign="center">
       <convert type="MSNWeather">temperature_current</convert>
     </widget>
@@ -278,58 +277,61 @@
     <widget render="Label" noWrap="1" source="session.MSNWeather" position="116,51" zPosition="8" size="75,30" font="Regular; 24" transparent="1" halign="right" backgroundColor="black">
       <convert type="MSNWeather">observationtime</convert>
     </widget>
-    <widget source="global.CurrentTime" render="Label" position="23,921" size="450,35" font="Regular; 24" halign="center" backgroundColor="black" transparent="1">
-      <convert type="ClockToText">Format:%A, %d.%m.%Y    %H:%M</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="27,522" size="1170,50" font="Regular;34" halign="left" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="grey">
+    <widget source="session.Event_Next" render="AXBlueRunningText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" position="993,541" size="895,50" font="Regular;36" halign="left" backgroundColor="black" transparent="1" zPosition="2" foregroundColor="cyan1">
       <convert type="EventName">NameNext</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="1252,123" size="640,90" font="Regular;40" halign="center" valign="center" foregroundColor="lightblue" backgroundColor="black" transparent="1" zPosition="3">
-      <convert type="ServiceName">Name</convert>
-    </widget>
-    <widget source="session.Event_Next" render="Label" position="849,915" size="150,50" font="Regular;36" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" zPosition="2">
+    <widget source="session.Event_Next" render="Label" position="1142,910" size="150,50" font="Regular;36" halign="left" foregroundColor="grey" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventTime">EndTime</convert>
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
-    <widget source="session.Event_Next" render="Label" position="688,915" size="150,50" font="Regular;36" halign="right" foregroundColor="grey" backgroundColor="black" transparent="1" zPosition="2">
+    <widget source="session.Event_Next" render="Label" position="990,910" size="150,50" font="Regular;36" halign="right" foregroundColor="grey" backgroundColor="black" transparent="1" zPosition="2">
       <convert type="EventTime">StartTime</convert>
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
-    <ePixmap pixmap="AX_Blue_FHD_4ATV/colors/00000000.png" position="1804,19" size="110,60" zPosition="-5" />
-    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line1200.png" position="22,175" size="1178,2" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line1200.png" position="22,509" size="1178,2" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line1200.png" position="22,577" size="1178,2" zPosition="1" alphatest="blend" />
-    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line1200.png" position="22,911" size="1178,2" zPosition="1" alphatest="blend" />
+    <widget source="global.CurrentTime" render="Label" position="1439,920" size="450,40" font="Regular; 26" halign="right" backgroundColor="black" transparent="1">
+      <convert type="ClockToText">Format:%A, %d.%m.%Y    %H:%M</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="993,130" size="650,50" font="Regular;40" halign="center" valign="center" backgroundColor="black" transparent="1" zPosition="3" foregroundColor="cyan1">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/colors/00000000.png" position="1701,23" size="215,55" zPosition="-5" />
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line890.png" position="995,537" size="890,2" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line890.png" position="995,907" size="890,2" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line890.png" position="52,590" size="890,2" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line890.png" position="52,181" size="890,2" zPosition="1" alphatest="blend" />
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line890.png" position="995,592" size="890,2" zPosition="1" alphatest="blend" />
     <eLabel text="Ch." position="1253,148" size="1,1" font="Regular;40" backgroundColor="black" foregroundColor="cyan" transparent="1" zPosition="9" />
-    <eLabel position="27,178" size="1170,330" backgroundColor="bluelabel" transparent="0" zPosition="0" />
-    <eLabel position="27,580" size="1170,330" backgroundColor="bluelabel" transparent="0" zPosition="0" />
-    <eLabel position="1253,219" size="640,360" zPosition="3" backgroundColor="backgroundPig" />
-    <widget source="session.VideoPicture" render="Pig" position="1253,219" size="640,360" zPosition="-8" backgroundColor="backgroundPig" />
-    <widget position="1403,745" size="490,30" backgroundColor="background" font="Regular;24" halign="left" valign="center" noWrap="1" render="Label" source="session.CurrentService" transparent="1" foregroundColor="yellow">
+    <eLabel position="993,190" size="640,345" zPosition="3" backgroundColor="backgroundPig" />
+    <widget source="session.VideoPicture" render="Pig" position="993,190" size="640,345" zPosition="5" backgroundColor="backgroundPig" />
+    <widget position="243,690" size="690,34" backgroundColor="background" font="Regular;30" halign="left" valign="center" noWrap="1" render="Label" source="session.CurrentService" transparent="1" foregroundColor="cyan1">
       <convert type="AXBlueExtraInfo">CryptoSpecial</convert>
     </widget>
-    <widget size="250,30" position="1403,701" backgroundColor="background" font="Regular;24" foregroundColor="lightblue" halign="left" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
+    <widget size="450,34" position="243,649" backgroundColor="background" font="Regular;30" foregroundColor="cyan1" halign="left" render="Label" source="session.CurrentService" transparent="1" valign="center" zPosition="1">
       <convert type="AXBlueServiceName">Provider</convert>
     </widget>
-    <widget position="1253,658" size="640,30" backgroundColor="background" font="Regular; 22" halign="left" valign="center" render="Label" source="session.CurrentService" transparent="1" foregroundColor="orange">
+    <widget position="53,607" size="840,34" backgroundColor="background" font="Regular; 30" halign="left" valign="center" render="Label" source="session.CurrentService" transparent="1">
       <convert type="AXBlueServiceName">%O  %s  %F %p %Y %f %M %b %o %r</convert>
     </widget>
-    <widget source="session.CurrentService" render="Label" position="1403,790" size="490,30" font="Regular; 24" transparent="1" zPosition="1" halign="left" valign="center" noWrap="1" foregroundColor="green">
+    <widget source="session.CurrentService" render="Label" position="244,798" size="690,34" font="Regular; 30" transparent="1" zPosition="1" halign="left" valign="center" noWrap="1" foregroundColor="cyan1">
       <convert type="AXBlueServiceName">Reference</convert>
     </widget>
-    <widget source="session.CurrentService" render="AXBlueRunningText" options=" movetype=running,startdelay=2000,steptime=60,direction=left,startpoint=0,wrap=1,always=0,repeat=2,oneshot=1" position="1403,835" size="490,30" font="Regular; 24" halign="left" valign="center" backgroundColor="background" transparent="1" foregroundColor="white" zPosition="1">
+    <widget source="session.CurrentService" render="AXBlueRunningText" options="movetype=running,startpoint=0,direction=left,steptime=40,repeat=5,startdelay=2000,always=0" position="247,925" size="710,34" font="Regular; 30" halign="left" valign="center" backgroundColor="background" transparent="1" foregroundColor="cyan1" zPosition="1">
       <convert type="AXBlueServiceInfo">HasHBBTV</convert>
     </widget>
-    <widget source="global.CurrentTime" render="AXBlueSYSTemp" position="1403,923" size="80,30" font="Regular;24" halign="left" valign="center" backgroundColor="background" foregroundColor="blue" noWrap="1" transparent="1" zPosition="3" />
-    <widget source="session.CurrentService" render="Label" position="1392,879" size="80,30" zPosition="1" font="Regular; 24" halign="left" valign="center" noWrap="1" transparent="1" foregroundColor="red">
+    <widget source="global.CurrentTime" render="AXBlueSYSTemp" position="247,882" size="180,34" font="Regular;30" halign="left" valign="center" backgroundColor="background" foregroundColor="cyan1" noWrap="1" transparent="1" zPosition="3" />
+    <widget source="session.CurrentService" render="Label" position="232,839" size="180,34" zPosition="1" font="Regular; 30" halign="left" valign="center" noWrap="1" transparent="1" foregroundColor="cyan1">
       <convert type="AXBlueCPUInfo">$0</convert>
     </widget>
-    <eLabel text="Provider:" position="1253,701" size="155,30" font="Regular;24" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" foregroundColor="lightblue" />
-    <eLabel text="Temperatur:" position="1253,923" size="155,30" font="Regular;24" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" foregroundColor="blue" />
-    <eLabel text="CPU-Last:" position="1253,879" size="150,30" font="Regular;24" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" foregroundColor="red" />
-    <eLabel text="HBBTV Info:" position="1253,835" size="155,30" font="Regular; 24" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" />
-    <eLabel text="Crypt Info:" position="1253,745" size="155,30" font="Regular;24" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" foregroundColor="yellow" />
-    <eLabel text="Caid Info:" position="1253,790" size="150,30" font="Regular;24" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" foregroundColor="green" />
+    <widget source="session.CurrentService" render="Label" font="Regular; 30" position="243,725" size="715,68" halign="left" zPosition="50" backgroundColor="black" transparent="1" noWrap="1" valign="center" foregroundColor="cyan1">
+      <convert type="CryptoInfo">VerboseInfo</convert>
+    </widget>
+    <ePixmap pixmap="AX_Blue_FHD_4ATV/menu/line2x830.png" position="975,125" size="2,830" zPosition="1" alphatest="blend" />
+    <eLabel text="Provider:" position="53,649" size="175,34" font="Regular; 30" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" />
+    <eLabel text="Temperatur:" position="53,882" size="195,34" font="Regular; 30" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" />
+    <eLabel text="CPU-Last:" position="53,839" size="170,34" font="Regular; 30" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" />
+    <eLabel text="HBBTV Info:" position="53,925" size="195,34" font="Regular; 30" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" />
+    <eLabel text="Crypt Info:" position="53,690" size="175,34" font="Regular; 30" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" />
+    <eLabel text="Caid Info:" position="53,797" size="170,34" font="Regular; 30" halign="left" valign="center" noWrap="1" backgroundColor="background" transparent="1" />
     <eLabel name="Rahmem_crypt" backgroundColor="bluelabel" zPosition="1" position="580,1017" size="65, 36" />
     <eLabel name="Rahmem_crypt" backgroundColor="bluelabel" zPosition="1" position="647,1017" size="65, 36" />
     <eLabel name="Rahmem_crypt" backgroundColor="bluelabel" zPosition="1" position="513,1017" size="65, 36" />
@@ -342,5 +344,6 @@
     <eLabel name="Rahmem_crypt" backgroundColor="bluelabel" zPosition="1" position="186,1017" size="30,36" />
     <eLabel name="Rahmem_crypt" backgroundColor="bluelabel" zPosition="1" position="154,1017" size="30,36" />
     <eLabel name="Rahmem_crypt" backgroundColor="bluelabel" zPosition="1" position="122,1017" size="30,36" />
+    <eLabel text="Ch." position="1253,148" size="1,1" font="Regular;40" backgroundColor="black" foregroundColor="cyan" transparent="1" zPosition="9" />
   </screen>
    </skin>
