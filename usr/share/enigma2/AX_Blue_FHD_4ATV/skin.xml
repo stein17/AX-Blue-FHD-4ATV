@@ -76,6 +76,7 @@
     <parameter name="PluginBrowserDownloadName" value="120,3,45" />
     <parameter name="PluginBrowserDownloadDescr" value="120,50,50" />
     <parameter name="PluginBrowserDownloadIcon" value="0,0,120,85" />
+	<parameter name="SHOUTcastListItem" value="34,30,45,120,37,37,70,40"/>
     <parameter name="ServiceInfo" value="0,0,450,50" />
     <parameter name="ServiceInfoLeft" value="0,0,450,45" />
     <parameter name="ServiceInfoRight" value="450,0,1000,45" />
